@@ -1,7 +1,7 @@
 # 100-Days-Of-DevOps-KodeKloud-Challenges-Solutions
 
 
-This repository contains my solutions and notes from the **100 Days of DevOps** challenge on **KodeKloud**. It covers practical DevOps topics including Linux, Docker, Kubernetes, Ansible, Terraform, Jenkins, and AWS.
+This repository contains my exercises and solutions from the **100 Days of DevOps** challenge on **KodeKloud**. It covers practical DevOps topics including Linux, Docker, Kubernetes, Ansible, Terraform, Jenkins, and AWS.
 
 1. Day 1: Linux User Setup with Non-Interactive Shell  
 2. Day 2: Temporary User Setup with Expiry  
