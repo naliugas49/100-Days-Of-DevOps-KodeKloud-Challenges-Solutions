@@ -1,5 +1,5 @@
 # Access to Server
-ssh <user>@stappo<x>
+ssh user@stapp0
 
 # 1. Update system
 sudo yum update -y
