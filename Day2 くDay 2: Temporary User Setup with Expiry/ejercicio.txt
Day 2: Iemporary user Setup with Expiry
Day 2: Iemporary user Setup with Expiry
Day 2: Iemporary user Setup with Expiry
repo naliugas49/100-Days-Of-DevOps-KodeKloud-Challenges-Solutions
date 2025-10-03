@@ -1,2 +1,0 @@
-As part of the temporary assignment to the Wautilus project, a developer named anita requires access for a limited duration.Io ensure smooth access management, a temporary user account with an expiry date is needed. Here's what you need to do:
-Create a user named anita on App `server 3 in Stratos Datacenter. set the expiry date to 2024-01-28, ensuring the user is created in lowercase as per standard protocol.
