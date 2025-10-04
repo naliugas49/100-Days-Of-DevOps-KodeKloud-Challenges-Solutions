@@ -1,0 +1,3 @@
+a. Install nginx on app server 2 , configure it to use port 8098 and its document root should be /var/www/html.
+b. Install php-fpm version 8.1 on app server 2, it must use the unix socket /var/run/php-fpm/default.sock (create the parent directories if don't exist). 
+c. Configure php-fpm and nginx to work together. d. Once configured correctly, you can test the website using curl http://stapp02:8098/index.php command from jump host.
