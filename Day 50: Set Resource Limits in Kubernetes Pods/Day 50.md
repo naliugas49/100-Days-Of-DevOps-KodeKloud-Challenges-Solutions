@@ -6,6 +6,7 @@ Limits: Memory: 20Mi, CPU: 100m
 
 # Comands
 ```vi httpd-deploy.yaml```
+
 ```kubectl apply -f httpd-deploy.yaml```
 
 # httpd-deploy.yaml
