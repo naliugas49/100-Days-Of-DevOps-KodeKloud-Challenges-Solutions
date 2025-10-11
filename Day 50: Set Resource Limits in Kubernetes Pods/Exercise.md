@@ -1,5 +1,7 @@
-``` ruby:
-"Hola Mundo".split('').each do |letter|
-  puts letter
-end
+
 ```
+var sumar2 = function(numero) {
+  return numero + 2;
+}
+```js
+
