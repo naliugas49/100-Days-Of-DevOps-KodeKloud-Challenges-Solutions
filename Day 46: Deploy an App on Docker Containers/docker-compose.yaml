@@ -1,0 +1,23 @@
+services:
+  web:
+    image: php:apache
+    container_name: php_web
+    ports:
+      - "3004:80"
+    volumes:
+      - /var/www/html:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:latest
+    container_name: mysql_web
+    ports:
+      - "3306:3306"
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: database_web
+      MYSQL_USER: custom_user
+      MYSQL_PASSWORD: ComplexP@ssw0rd
+      MYSQL_ROOT_PASSWORD: RootTempPass123
