@@ -8,28 +8,31 @@
 
 # httpd-deploy.yaml
 ```
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: httpd-pod
+  name: nginx
   labels:
-    app: httpd
+   app: nginx
 spec:
-  containers:
-  - name: httpd-container
-    image: httpd:latest
-    resources:
-      limits:
-        cpu: 100m
-        memory: 20Mi
-      requests:
-        cpu: 100m
-        memory: 15Mi
-    ports:
-    - containerPort: 80```
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx        
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+          - containerPort: 80
+```
 
 
-#Check
+# Check
 
 ```kubectl get deployments```
 
