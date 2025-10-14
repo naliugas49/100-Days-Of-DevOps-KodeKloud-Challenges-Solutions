@@ -1,40 +1,34 @@
-# The problem is that nginx container was config with path "/var/www/html", but the volume was at "/usr/share/nginx/html"
+# The problem is that "nginx-container" was config with path "/usr/share/nginx/html", but the volume was at "/var/www/html"
 
-## 🔧 Option 1: Fix nginx.conf to use the correct path
+## 🔧 Option 1: Fix to use the correct path
 
-### ✅ Edit ConfigMap nginx-config 
+### ✅ Edit pod nginx-phpfpm
 
-```kubectl edit configmap nginx-config```
+```kubectl  edit pod nginx-phpfpm ```
 
-### ✅ Change route
+### ✅ Change route in the container "nginx-container"
 
-```root /var/www/html;```
+```mountPath: /usr/share/nginx/html```
 
 replace to
 
-```root /usr/share/nginx/html;```
+``` mountPath: /var/www/html```
 
-### ✅ How do I know if a pod is managed by a deployment?
+### when save:
+```error: pods "nginx-phpfpm" is invalid```
 
-``` kubectl get pod nginx-phpfpm -o jsonpath="{.metadata.ownerReferences}" ```
+```A copy of your changes has been stored to "/tmp/kubectl-edit-3208460137.yaml"```
 
-If the result is empty, the pod is not managed by a Deployment
+```error: Edit cancelled, no valid changes were saved.```
 
-### ✅ How do I recreate a pod if it's not managed by a deployment?
 
-``` kubectl get pod nginx-phpfpm -o yaml > nginx-phpfpm.yaml ```
+### Start again el pod
 
-### 🔄 Step 2: Restart pod to apply the new ConfigMap
-
-``` kubectl delete pod nginx-phpfpm ```
-
-### Volver a crear el pod
-
-``` kubectl apply -f nginx-phpfpm.yaml ```
+```  kubectl apply -f /tmp/kubectl-edit-3208460137.yaml --force ```
 
 ### ✅ Step 3: Copy index.php to the Nginx container
 
-``` kubectl cp /home/thor/index.php nginx-phpfpm:/usr/share/nginx/html/index.php -c nginx-container  ```
+``` kubectl cp /home/thor/index.php nginx-phpfpm:/var/www/html -c nginx-container  ```
 
 
 
