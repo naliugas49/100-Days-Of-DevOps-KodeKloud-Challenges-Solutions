@@ -20,7 +20,7 @@ spec:
     terminationMessagePath: /dev/termination-log
     terminationMessagePolicy: File
     volumeMounts:
-    - mountPath: /usr/share/nginx/html
+    - mountPath: /var/www/html
       name: shared-files
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
       name: kube-api-access-nhw6x
@@ -32,7 +32,7 @@ spec:
     terminationMessagePath: /dev/termination-log
     terminationMessagePolicy: File
     volumeMounts:
-    - mountPath: /var/www/html
+    - mountPath: /usr/share/nginx/htm
       name: shared-files
     - mountPath: /etc/nginx/nginx.conf
       name: nginx-config-volume
