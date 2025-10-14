@@ -14,12 +14,12 @@ replace to
 
 ``` mountPath: /var/www/html```
 
-### when save:
+### when save we can see the logs:
 ```error: pods "nginx-phpfpm" is invalid```
 
-```A copy of your changes has been stored to "/tmp/kubectl-edit-3208460137.yaml"```
+A copy of your changes has been stored to "/tmp/kubectl-edit-3208460137.yaml"
 
-```error: Edit cancelled, no valid changes were saved.```
+error: Edit cancelled, no valid changes were saved.```
 
 
 ### Start again el pod
