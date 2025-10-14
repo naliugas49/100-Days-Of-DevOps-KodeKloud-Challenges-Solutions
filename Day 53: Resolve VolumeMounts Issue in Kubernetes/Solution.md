@@ -15,7 +15,7 @@ replace to
 ``` mountPath: /var/www/html```
 
 ### when save we can see the logs:
-```error: pods "nginx-phpfpm" is invalid```
+```error: pods "nginx-phpfpm" is invalid
 
 A copy of your changes has been stored to "/tmp/kubectl-edit-3208460137.yaml"
 
