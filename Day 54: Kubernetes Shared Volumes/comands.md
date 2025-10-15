@@ -19,7 +19,8 @@ echo "Hello World" > official.txt
 exit
 ´´
 ## Check the file in other container
+
 ´´k exec -it volume-share-datacenter -c volume-container-datacenter-2 -- sh´´
 
 ### Into container
-cat /tmp/cluster/official.txt
+`` cat /tmp/cluster/official.txt ``
