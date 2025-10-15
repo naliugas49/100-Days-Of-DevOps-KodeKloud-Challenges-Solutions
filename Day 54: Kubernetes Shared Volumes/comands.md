@@ -8,7 +8,18 @@
 ## Check
 ``k get pod``
 
-k exec -it volume-share-datacenter -c volume-container-datacenter-1 -- sh
+## Access to container 1 to create the file
+``k exec -it volume-share-datacenter -c volume-container-datacenter-1 -- sh``
 
+### Into container
+``
+cd /tmp/official
+touch official.txt
+echo "Hello World" > official.txt
+exit
+´´
+## Check the file in other container
+´´k exec -it volume-share-datacenter -c volume-container-datacenter-2 -- sh´´
 
-k exec -it volume-share-datacenter -c volume-container-datacenter-2 -- sh
+### Into container
+cat /tmp/cluster/official.txt
