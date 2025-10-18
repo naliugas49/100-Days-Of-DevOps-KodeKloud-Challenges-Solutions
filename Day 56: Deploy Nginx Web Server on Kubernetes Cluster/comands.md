@@ -1,4 +1,4 @@
-## Crete Manifest
+## Create Manifest
 ```
 vi nginx-deployment.yaml
 ```
