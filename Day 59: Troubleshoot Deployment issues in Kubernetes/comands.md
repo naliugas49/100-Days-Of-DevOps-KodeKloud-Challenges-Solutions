@@ -8,9 +8,11 @@ k get pods
 ``
 k describe pod redis-deployment-5bcd4c7d64-rqq9v
 ``
+
 ### El error era en el deploy debía decir "redis-config" y decía "redis-conig"
-``
+
 ## Vemos como se llama el deply y lo editamos
+
 ``
 k get deployments.apps
 k edit deployments.apps redis-deployment
@@ -26,4 +28,6 @@ k describe  pod redis-deployment-54cdf4f76d-sksdj
 k edit deployments.apps redis-deployment
 ``
 ## Comprobación final para ver que funcione el pod
+``
 k get pod
+``
