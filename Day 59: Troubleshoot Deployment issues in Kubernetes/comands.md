@@ -25,7 +25,7 @@ k get pod
 k describe  pod redis-deployment-54cdf4f76d-sksdj
 ```
 
-### El error era en el deploy debía decir "redis:alpine" y decía "redis-alpin"****
+### El error era en el deploy debía decir "redis:alpine" y decía "redis-alpin"
 
 ``
 k edit deployments.apps redis-deployment
